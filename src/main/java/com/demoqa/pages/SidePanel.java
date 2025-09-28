@@ -1,5 +1,6 @@
 package com.demoqa.pages;
 
+import com.demoqa.pages.alertsFrameWindows.AlertsPage;
 import com.demoqa.pages.bookStore.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,7 +14,15 @@ public class SidePanel extends BasePage{
     @FindBy (xpath = "//span[.='Login']")
     WebElement login;
     public LoginPage selectLogin() {
-        click(login);
+        //click(login);
+        clickWithJS(login, 0,500);
         return new LoginPage(driver);
+    }
+
+    @FindBy(xpath = "//span[.='Alerts']")
+    WebElement alerts;
+    public AlertsPage selectAlerts() {
+        clickWithJS(alerts,0,300);
+        return new AlertsPage(driver);
     }
 }

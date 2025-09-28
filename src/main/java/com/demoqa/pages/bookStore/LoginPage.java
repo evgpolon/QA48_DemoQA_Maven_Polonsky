@@ -18,8 +18,10 @@ public class LoginPage extends BasePage {
 
 
     public LoginPage enterUserData(String userName, String password) {
-        type(userField, userName);
-        type(passwordField,password);
+        //type(userField, userName);
+        //type(passwordField,password);
+        typeWithJS(userField,userName,0,300);
+        typeWithJS(passwordField,password,0,300);
         return this;
     }
 
@@ -28,6 +30,7 @@ public class LoginPage extends BasePage {
 
     public ProfilePage clickOnLoginButton() {
         click(loginButton);
+
         return new ProfilePage(driver);
     }
 }
