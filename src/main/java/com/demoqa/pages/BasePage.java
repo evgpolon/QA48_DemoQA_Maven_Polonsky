@@ -11,7 +11,7 @@ import java.time.Duration;
 
 public class BasePage {
     public WebDriver driver;
-    JavascriptExecutor js;
+    public static JavascriptExecutor js;
 
     public BasePage(WebDriver driver){
         this.driver =driver;
@@ -50,5 +50,19 @@ public class BasePage {
     public boolean shouldHaveText(WebElement element, String text, int time) {
         return new WebDriverWait(driver, Duration.ofSeconds(time))
                 .until(ExpectedConditions.textToBePresentInElement(element,text));
+    }
+
+    public void hideAd(){
+        js.executeScript("document.getElementById('adplus-anchor').style.display='none';");
+    }
+
+
+    public void hileFooter(){
+        js.executeScript("document.querySelector('footer').style.display='none';");
+    }
+
+    public void hideIframes(){
+        hideAd();
+        hileFooter();
     }
 }
