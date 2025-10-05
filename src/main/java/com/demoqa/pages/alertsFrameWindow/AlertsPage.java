@@ -24,4 +24,8 @@ public class AlertsPage extends BasePage {
                 accept();
         return this;
     }
+
+    public AlertsPage selectResult(String cancel) {
+        return this;
+    }
 }

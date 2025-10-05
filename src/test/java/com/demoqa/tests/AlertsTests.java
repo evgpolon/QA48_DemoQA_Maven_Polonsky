@@ -20,4 +20,9 @@ public class AlertsTests extends TestBase{
     public void alertWaitTest(){
         new AlertsPage(driver).alertWithTimer();
     }
+
+    @Test
+    public void alertWithSelectTest(){
+        new AlertsPage(driver).selectResult("Cancel").veryfiResult("Cancel");
+    }
 }
