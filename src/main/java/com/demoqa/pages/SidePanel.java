@@ -1,6 +1,6 @@
 package com.demoqa.pages;
 
-import com.demoqa.pages.alertsFrameWindows.AlertsPage;
+import com.demoqa.pages.alertsFrameWindow.AlertsPage;
 import com.demoqa.pages.bookStore.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

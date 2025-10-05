@@ -1,4 +1,4 @@
-package com.demoqa.pages.alertsFrameWindows;
+package com.demoqa.pages.alertsFrameWindow;
 
 import com.demoqa.pages.BasePage;
 import org.openqa.selenium.WebDriver;
