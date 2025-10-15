@@ -4,6 +4,8 @@ import com.demoqa.pages.alertsFrameWindow.AlertsPage;
 import com.demoqa.pages.alertsFrameWindow.BrowserWindowsPage;
 import com.demoqa.pages.alertsFrameWindow.FramePage;
 import com.demoqa.pages.bookStore.LoginPage;
+import com.demoqa.pages.wigets.MenuPage;
+import com.demoqa.pages.wigets.SelectMenuPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -50,5 +52,18 @@ public class SidePanel extends BasePage{
     public BrowserWindowsPage selectBrowserWindows() {
         clickWithJS(browserWindows,0,300);
         return new BrowserWindowsPage(driver);
+    }
+
+    @FindBy(xpath = "//span[.='Select Menu']")
+    WebElement selectMenu;
+    public SelectMenuPage getSelectMenu() {
+        clickWithJS(selectMenu,0,600);
+        return new SelectMenuPage(driver);
+    }
+    @FindBy(xpath = "//span[.='Menu']")
+    WebElement menu;
+    public MenuPage getMenu() {
+        clickWithJS(menu, 0, 600);
+        return new MenuPage(driver);
     }
 }
