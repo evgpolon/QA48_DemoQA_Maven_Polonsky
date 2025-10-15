@@ -18,7 +18,6 @@ public class BrowserWindowsPage extends BasePage {
     WebElement tabButton;
     public BrowserWindowsPage switchToNewTab(int index) {
         click(tabButton);
-
         List<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(index));
         return this;
@@ -28,7 +27,6 @@ public class BrowserWindowsPage extends BasePage {
     WebElement windowButton;
     public BrowserWindowsPage switchToNewWindow(int index) {
         click(windowButton);
-
         List<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(index));
         return this;

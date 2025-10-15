@@ -24,6 +24,6 @@ public class NewWindowTests extends TestBase{
 
     @Test
     public void newWindowTest(){
-        new BrowserWindowsPage(driver).switchToNewWindow(2).verifyNewWindowTitle("This is a sample page");
+        new BrowserWindowsPage(driver).switchToNewWindow(1).verifyNewWindowTitle("This is a sample page");
     }
 }
