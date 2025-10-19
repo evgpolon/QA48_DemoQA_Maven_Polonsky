@@ -58,13 +58,13 @@ public class BasePage {
     }
 
 
-    public void hileFooter(){
+    public void hideFooter(){
         js.executeScript("document.querySelector('footer').style.display='none';");
     }
 
     public void hideIframes(){
         hideAd();
-        hileFooter();
+        hideFooter();
     }
 
     public void pause(int millis){

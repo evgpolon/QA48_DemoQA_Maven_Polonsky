@@ -3,9 +3,13 @@ package com.demoqa.pages;
 import com.demoqa.pages.alertsFrameWindow.AlertsPage;
 import com.demoqa.pages.alertsFrameWindow.BrowserWindowsPage;
 import com.demoqa.pages.alertsFrameWindow.FramePage;
-import com.demoqa.pages.bookStore.LoginPage;
-import com.demoqa.pages.wigets.MenuPage;
-import com.demoqa.pages.wigets.SelectMenuPage;
+import com.demoqa.pages.bookStoreWindow.LoginPage;
+import com.demoqa.pages.elementsWindow.ButtonPage;
+import com.demoqa.pages.interactionsWindow.DroppablePage;
+import com.demoqa.pages.wigetsWindow.MenuPage;
+import com.demoqa.pages.wigetsWindow.SelectMenuPage;
+import com.demoqa.pages.wigetsWindow.SliderPage;
+import com.demoqa.pages.wigetsWindow.ToolTipsPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -65,5 +69,33 @@ public class SidePanel extends BasePage{
     public MenuPage getMenu() {
         clickWithJS(menu, 0, 600);
         return new MenuPage(driver);
+    }
+
+    @FindBy(xpath = "//span[.='Slider']")
+    WebElement slider;
+    public SliderPage selectSlider() {
+        clickWithJS(slider, 0, 300);
+        return new SliderPage(driver);
+    }
+
+    @FindBy(xpath = "//span[.='Droppable']")
+    WebElement droppable;
+    public DroppablePage selectDroppable() {
+        clickWithJS(droppable, 0, 600);
+        return new DroppablePage(driver);
+    }
+
+    @FindBy(xpath = "//span[.='Tool Tips']")
+    WebElement toolTips;
+    public ToolTipsPage selectToolTips() {
+        clickWithJS(toolTips,0,600);
+        return new ToolTipsPage(driver);
+    }
+
+    @FindBy(xpath = "//span[.='Buttons']")
+    WebElement buttons;
+    public ButtonPage selectButtons() {
+        click(buttons);
+        return new ButtonPage(driver);
     }
 }

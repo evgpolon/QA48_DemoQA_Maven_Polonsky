@@ -2,7 +2,7 @@ package com.demoqa.tests;
 
 import com.demoqa.pages.HomePage;
 import com.demoqa.pages.SidePanel;
-import com.demoqa.pages.wigets.SelectMenuPage;
+import com.demoqa.pages.wigetsWindow.SelectMenuPage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

@@ -1,4 +1,4 @@
-package com.demoqa.pages.wigets;
+package com.demoqa.pages.wigetsWindow;
 
 import com.demoqa.pages.BasePage;
 import org.openqa.selenium.WebDriver;

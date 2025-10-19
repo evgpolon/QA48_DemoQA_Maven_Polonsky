@@ -1,7 +1,7 @@
 package com.demoqa.tests;
 
 import com.demoqa.pages.HomePage;
-import com.demoqa.pages.bookStore.ProfilePage;
+import com.demoqa.pages.bookStoreWindow.ProfilePage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

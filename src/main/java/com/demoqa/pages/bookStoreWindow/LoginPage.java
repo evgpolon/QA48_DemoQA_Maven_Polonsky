@@ -1,4 +1,4 @@
-package com.demoqa.pages.bookStore;
+package com.demoqa.pages.bookStoreWindow;
 
 import com.demoqa.pages.BasePage;
 import org.openqa.selenium.WebDriver;
